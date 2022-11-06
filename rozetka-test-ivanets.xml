@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>
+		S1
+	</id>
+	<name>
+		Master
+	</name>
+	<description>
+	</description>
+	<sections>
+		<section>
+			<name>
+				Test Cases
+			</name>
+			<description>
+			</description>
+			<cases>
+				<case>
+					<id>
+						C1
+					</id>
+					<title>
+						New user registration(Positive tests)
+					</title>
+					<template>
+						Test Case (Steps)
+					</template>
+					<type>
+						Functional
+					</type>
+					<priority>
+						Critical
+					</priority>
+					<estimate>
+					</estimate>
+					<references>
+					</references>
+					<custom>
+						<automation_type>
+							<id>
+								0
+							</id>
+							<value>
+								None
+							</value>
+						</automation_type>
+						<preconds>
+							1. Access to the Google Chrome browser
+							2. Open the link https://rozetka.com.ua/ua/
+							3. Click the &apos;User&apos; icon
+						</preconds>
+						<steps_separated>
+							<step>
+								<index>
+									1
+								</index>
+								<content>
+									Click the &apos;Зареєструватися&apos; link
+								</content>
+								<expected>
+									Opening the registration form
+								</expected>
+							</step>
+							<step>
+								<index>
+									2
+								</index>
+								<content>
+									Enter &apos;Вікторія&apos; to the &apos;Ім&apos;я&apos; field
+								</content>
+								<expected>
+									The text is displayed in the input field
+								</expected>
+							</step>
+							<step>
+								<index>
+									3
+								</index>
+								<content>
+									Enter &apos;Іванець&apos; to the &apos;Прізвище&apos; field
+								</content>
+								<expected>
+									The text is displayed in the input field
+								</expected>
+							</step>
+							<step>
+								<index>
+									4
+								</index>
+								<content>
+									Enter &apos;983419859&apos; to the &apos;Номер телефону&apos; field
+								</content>
+								<expected>
+									The text &apos;+380&apos; is displayed in the input field and cannot be changed and &apos;983419859&apos; also is displayed in the input field
+								</expected>
+							</step>
+							<step>
+								<index>
+									5
+								</index>
+								<content>
+									Enter &apos;viktoriyaivanets0@gmail.com&apos; to the &apos;Ел. пошта&apos; field
+								</content>
+								<expected>
+									The text is displayed in the input field
+								</expected>
+							</step>
+							<step>
+								<index>
+									6
+								</index>
+								<content>
+									Enter &apos;FsGVJHK4ERXHk8&apos; to the &apos;Пароль&apos; field
+								</content>
+								<expected>
+									Password is hidden in the input field
+								</expected>
+							</step>
+							<step>
+								<index>
+									7
+								</index>
+								<content>
+									Click the &apos;Show password&apos; button
+								</content>
+								<expected>
+									Password is displayed in the input field
+								</expected>
+							</step>
+							<step>
+								<index>
+									8
+								</index>
+								<content>
+									Click the &apos;Show password&apos; button again
+								</content>
+								<expected>
+									Password is hidden in the input field
+								</expected>
+							</step>
+							<step>
+								<index>
+									9
+								</index>
+								<content>
+									Click the &apos;Зареєструватися&apos; button
+								</content>
+								<expected>
+									Successful registration
+								</expected>
+							</step>
+							<step>
+								<index>
+									10
+								</index>
+								<content>
+									Click the &apos;Google&apos; button and choose an account &apos;viktoriyaivanets0@gmail.com&apos;
+								</content>
+								<expected>
+									Opening the &apos;Google account selection&apos; window and successful login
+								</expected>
+							</step>
+							<step>
+								<index>
+									11
+								</index>
+								<content>
+									Click the &apos;Facebook&apos; button and choose an account &apos;Viktoriya Ivanets&apos;
+								</content>
+								<expected>
+									Opening the &apos;Facebook account selection&apos; window and successful login
+								</expected>
+							</step>
+							<step>
+								<index>
+									12
+								</index>
+								<content>
+									Click the &apos;Я вже зареєстрований&apos; button
+								</content>
+								<expected>
+									Opening the account login form
+								</expected>
+							</step>
+							<step>
+								<index>
+									13
+								</index>
+								<content>
+									Click the &apos;Close&apos; button
+								</content>
+								<expected>
+									Closing the registration window
+								</expected>
+							</step>
+						</steps_separated>
+					</custom>
+				</case>
+				<case>
+					<id>
+						C2
+					</id>
+					<title>
+						New user registration(Negative tests)
+					</title>
+					<template>
+						Test Case (Steps)
+					</template>
+					<type>
+						Functional
+					</type>
+					<priority>
+						Critical
+					</priority>
+					<estimate>
+					</estimate>
+					<references>
+					</references>
+					<custom>
+						<automation_type>
+							<id>
+								0
+							</id>
+							<value>
+								None
+							</value>
+						</automation_type>
+						<preconds>
+							1. Access to the Google Chrome browser
+							2. Open the link https://rozetka.com.ua/ua/
+							3. Click the &apos;User&apos; icon
+							4. Register a user with the following data: &apos;Ім&apos;я&apos; - &apos;Вікторія&apos;, &apos;Прізвище&apos; - &apos;Іванець&apos;, &apos;Номер телефону&apos; - &apos;983419859&apos;, &apos;Ел.пошта&apos; - &apos;viktoriyaivanets0@gmail.com&apos;, &apos;Придумайте пароль&apos; - &apos;FsGVJHK4ERXHk8&apos;.
+						</preconds>
+						<steps_separated>
+							<step>
+								<index>
+									1
+								</index>
+								<content>
+									Click the &apos;Зареєструватися&apos; button
+								</content>
+								<expected>
+									Opening the registration form
+								</expected>
+							</step>
+							<step>
+								<index>
+									2
+								</index>
+								<content>
+									Click the &apos;Зареєструватися&apos; button in the registration form
+								</content>
+								<expected>
+									Error, message about the need to fill in mandatory fields
+								</expected>
+							</step>
+							<step>
+								<index>
+									3
+								</index>
+								<content>
+									Enter &apos;000000&apos; to all fields and click the button &apos;Зареєструватися&apos;
+								</content>
+								<expected>
+									Error, message about incorrect input into the fields
+								</expected>
+							</step>
+							<step>
+								<index>
+									4
+								</index>
+								<content>
+									Enter &apos;000000&apos; to the &apos;Придумайте пароль&apos;field and click the button &apos;Зареєструватися&apos;
+								</content>
+								<expected>
+									Error, the password does not meet the security requirements
+								</expected>
+							</step>
+							<step>
+								<index>
+									5
+								</index>
+								<content>
+									Enter words in Latin to the &apos;Ім&apos;я&apos; and &apos;Прізвище&apos; fields and click the button &apos;Зареєструватися&apos;
+								</content>
+								<expected>
+									An error, a message about the need to enter data in Cyrillic
+								</expected>
+							</step>
+							<step>
+								<index>
+									6
+								</index>
+								<content>
+									Enter the following data in the fields: &apos;Ім&apos;я&apos; - &apos;Вікторія&apos;, &apos;Прізвище&apos; - &apos;Іванець&apos;, &apos;Номер телефону&apos; - &apos;983419859&apos;, &apos;Ел.пошта&apos; - &apos;viktoriyaivanets0@gmail.com&apos;, &apos;Придумайте пароль&apos; - &apos;FsGVJHK4ERXHk8&apos; and click the button &apos;Зареєструватися&apos;
+								</content>
+								<expected>
+									Error message about already existing user
+								</expected>
+							</step>
+						</steps_separated>
+					</custom>
+				</case>
+				<case>
+					<id>
+						C3
+					</id>
+					<title>
+						Login to the system
+					</title>
+					<template>
+						Test Case (Steps)
+					</template>
+					<type>
+						Functional
+					</type>
+					<priority>
+						Critical
+					</priority>
+					<estimate>
+					</estimate>
+					<references>
+					</references>
+					<custom>
+						<automation_type>
+							<id>
+								0
+							</id>
+							<value>
+								None
+							</value>
+						</automation_type>
+						<preconds>
+							1. Access to the Google Chrome browser
+							2. Open the link https://rozetka.com.ua/ua/
+							3. Register a user with the following data: &apos;Ім&apos;я&apos; - &apos;Вікторія&apos;, &apos;Прізвище&apos; - &apos;Іванець&apos;, &apos;Номер телефону&apos; - &apos;983419859&apos;, &apos;Ел.пошта&apos; - &apos;viktoriyaivanets0@gmail.com&apos;, &apos;Придумайте пароль&apos; - &apos;FsGVJHK4ERXHk8&apos;.
+						</preconds>
+						<steps_separated>
+							<step>
+								<index>
+									1
+								</index>
+								<content>
+									Click the &apos;User&apos; icon
+								</content>
+								<expected>
+									Opening the login form
+								</expected>
+							</step>
+							<step>
+								<index>
+									2
+								</index>
+								<content>
+									Enter &apos;983419859&apos; to the &apos;Ел. пошта або телефон&apos; field and &apos;FsGVJHK4ERXHk8&apos; to the &apos;Пароль&apos; field and click the button &apos;Увійти&apos;
+								</content>
+								<expected>
+									Successful login
+								</expected>
+							</step>
+							<step>
+								<index>
+									3
+								</index>
+								<content>
+									Enter &apos;viktoriyaivanets0@gmail.com&apos; to the &apos;Ел. пошта або телефон&apos; field and &apos;FsGVJHK4ERXHk8&apos; to the &apos;Пароль&apos; field and click the button &apos;Увійти&apos;
+								</content>
+								<expected>
+									Successful login
+								</expected>
+							</step>
+							<step>
+								<index>
+									4
+								</index>
+								<content>
+									Enter &apos;983419859&apos; to the &apos;Ел. пошта або телефон&apos; field and &apos;F4ERXHk8&apos; to the &apos;Пароль&apos; field and click the button &apos;Увійти&apos;
+								</content>
+								<expected>
+									Error message about incorrect password
+								</expected>
+							</step>
+							<step>
+								<index>
+									5
+								</index>
+								<content>
+									Enter &apos;viktoriyaivanets000@gmail.com&apos; to the &apos;Ел. пошта або телефон&apos; field and &apos;FsGVJHK4ERXHk8&apos; to the &apos;Пароль&apos; field and click the button &apos;Увійти&apos;
+								</content>
+								<expected>
+									Error message about incorrect login
+								</expected>
+							</step>
+							<step>
+								<index>
+									6
+								</index>
+								<content>
+									Enter &apos;983419850&apos; to the &apos;Ел. пошта або телефон&apos; field and &apos;FsGVJHK4ERXHk8&apos; to the &apos;Пароль&apos; field and click the button &apos;Увійти&apos;
+								</content>
+								<expected>
+									Error message about incorrect login
+								</expected>
+							</step>
+							<step>
+								<index>
+									7
+								</index>
+								<content>
+									Do not enter data into the fields and click the button &apos;Увійти&apos;
+								</content>
+								<expected>
+									Error, message about the need to enter data
+								</expected>
+							</step>
+							<step>
+								<index>
+									8
+								</index>
+								<content>
+									Click the &apos;Google&apos; button and choose an account &apos;viktoriyaivanets0@gmail.com&apos;
+								</content>
+								<expected>
+									Opening the &apos;Google account selection&apos; window and successful login
+								</expected>
+							</step>
+							<step>
+								<index>
+									9
+								</index>
+								<content>
+									Click the &apos;Facebook&apos; button and choose an account &apos;Viktoriya Ivanets&apos;
+								</content>
+								<expected>
+									Opening the &apos;Facebook account selection&apos; window and successful login
+								</expected>
+							</step>
+							<step>
+								<index>
+									10
+								</index>
+								<content>
+									Click the link &apos;Нагадати пароль&apos;
+								</content>
+								<expected>
+									Opening the password recovery form
+								</expected>
+							</step>
+							<step>
+								<index>
+									11
+								</index>
+								<content>
+									Click the link &apos;Зареєструватися&apos;
+								</content>
+								<expected>
+									Opening the registration form
+								</expected>
+							</step>
+							<step>
+								<index>
+									12
+								</index>
+								<content>
+									Click the close button
+								</content>
+								<expected>
+									Closing the login form
+								</expected>
+							</step>
+						</steps_separated>
+					</custom>
+				</case>
+				<case>
+					<id>
+						C4
+					</id>
+					<title>
+						Shopping cart
+					</title>
+					<template>
+						Test Case (Steps)
+					</template>
+					<type>
+						Functional
+					</type>
+					<priority>
+						Critical
+					</priority>
+					<estimate>
+					</estimate>
+					<references>
+					</references>
+					<custom>
+						<automation_type>
+							<id>
+								0
+							</id>
+							<value>
+								None
+							</value>
+						</automation_type>
+						<preconds>
+							1. Access to the Google Chrome browser
+							2. Open the link https://rozetka.com.ua/ua/
+							3. Login with data: &apos;Ел.пошта&apos; - &apos;viktoriyaivanets0@gmail.com&apos;, &apos;Пароль&apos; - &apos;FsGVJHK4ERXHk8&apos;
+						</preconds>
+						<steps_separated>
+							<step>
+								<index>
+									1
+								</index>
+								<content>
+									Click the &apos;Shopping cart&apos; icon
+								</content>
+								<expected>
+									Opening the shopping cart window - is empty
+								</expected>
+							</step>
+							<step>
+								<index>
+									2
+								</index>
+								<content>
+									Click &apos;Каталог&apos;-&amp;amp;gt;&apos;Ноутбуки та комп&apos;ютери&apos;-&amp;amp;gt;&apos;Ноутбуки&apos;-&amp;amp;gt;&apos;Acer&apos;
+								</content>
+								<expected>
+									Opening of the Acer notebook catalog
+								</expected>
+							</step>
+							<step>
+								<index>
+									3
+								</index>
+								<content>
+									Choose &apos;Ноутбук Acer Aspire 7 A715-42G-R7BK (NH.QE5EU.00L) Charcoal Black&apos; and add it to shopping cart
+								</content>
+								<expected>
+									Notification of adding the product to the cart
+								</expected>
+							</step>
+							<step>
+								<index>
+									4
+								</index>
+								<content>
+									Click the &apos;Shopping cart&apos; icon
+								</content>
+								<expected>
+									Opening the shopping cart window - &apos;Ноутбук Acer Aspire 7 A715-42G-R7BK (NH.QE5EU.00L) Charcoal Black&apos; in the cart
+								</expected>
+							</step>
+							<step>
+								<index>
+									5
+								</index>
+								<content>
+									Click the button &apos;Additional functions&apos; (3 dots) and select &apos;Видалити&apos;
+								</content>
+								<expected>
+									Removing the product from the cart
+								</expected>
+							</step>
+							<step>
+								<index>
+									6
+								</index>
+								<content>
+									Click the &apos;Оформити замовлення&apos; button
+								</content>
+								<expected>
+									Opening the order page
+								</expected>
+							</step>
+						</steps_separated>
+					</custom>
+				</case>
+				<case>
+					<id>
+						C5
+					</id>
+					<title>
+						Website language
+					</title>
+					<template>
+						Test Case (Steps)
+					</template>
+					<type>
+						Functional
+					</type>
+					<priority>
+						High
+					</priority>
+					<estimate>
+					</estimate>
+					<references>
+					</references>
+					<custom>
+						<automation_type>
+							<id>
+								0
+							</id>
+							<value>
+								None
+							</value>
+						</automation_type>
+						<preconds>
+							1. Access to the Google Chrome browser
+							2. Open the link https://rozetka.com.ua/ua/
+						</preconds>
+						<steps_separated>
+							<step>
+								<index>
+									1
+								</index>
+								<content>
+									Click the &apos;RU&apos; button
+								</content>
+								<expected>
+									Changing the website language to Russian
+								</expected>
+							</step>
+							<step>
+								<index>
+									2
+								</index>
+								<content>
+									Click the &apos;UA&apos; button
+								</content>
+								<expected>
+									Changing the website language to Ukrainian
+								</expected>
+							</step>
+						</steps_separated>
+					</custom>
+				</case>
+			</cases>
+		</section>
+	</sections>
+</suite>
