@@ -1,3 +1,5 @@
+import io.qameta.allure.*;
+import org.checkerframework.framework.qual.PreconditionAnnotation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -15,14 +17,22 @@ import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 
 public class RozetkaTest extends WebSettings{
 
-    @Test
+    @Test(priority = 5)
+    @Description("Website translation check")
+    @Severity(SeverityLevel.MINOR)
+    @Link(url = "https://github.com/Test-Automation-Crash-Course-24-10-22/team_12/issues/15#issue-1447091147")
+    @Issue("15")
     public void websiteTranslation() {
         HomePage homePage = new HomePage(driver);
         homePage.clickLanguageIcon();
         Assert.assertEquals("Найти", homePage.getTextFindButton());
     }
 
-    @Test
+    @Test(priority = 3)
+    @Description("Checking the correct operation of the Знайти button")
+    @Severity(SeverityLevel.NORMAL)
+    @Link(url = "https://github.com/Test-Automation-Crash-Course-24-10-22/team_12/issues/10#issue-1447081638")
+    @Issue("10")
     public void checkingFindButton(){
         HomePage homePage = new HomePage(driver);
         homePage.enterDataInInput("asus");
@@ -31,14 +41,22 @@ public class RozetkaTest extends WebSettings{
         Assert.assertEquals("«asus»", homePage.getTextAsusTitle());
     }
 
-    @Test
+    @Test(priority = 2)
+    @Description("Checking the correct operation of the Catalog button")
+    @Severity(SeverityLevel.CRITICAL)
+    @Link(url = "https://github.com/Test-Automation-Crash-Course-24-10-22/team_12/issues/8#issue-1447075144")
+    @Issue("8")
     public void checkingCatalogButton(){
         HomePage homePage = new HomePage(driver);
         homePage.catalogButtonClick();
         Assert.assertEquals("Ноутбуки", homePage.getTextCatalogTitle());
     }
 
-    @Test
+    @Test(priority = 1)
+    @Description("Authorization check")
+    @Severity(SeverityLevel.NORMAL)
+    @Link(url = "https://github.com/Test-Automation-Crash-Course-24-10-22/team_12/issues/14#issue-1447088745")
+    @Issue("14")
     public void authorization(){
         HomePage homePage = new HomePage(driver);
         AutorizationPage autorizationPage = new AutorizationPage(driver);
@@ -47,14 +65,18 @@ public class RozetkaTest extends WebSettings{
         autorizationPage.enterDataInEmailField();
         autorizationPage.enterDataInPasswordField();
         autorizationPage.enterButtonClick();
-        homePage.sleepThreeSeconds();
+        homePage.sleepFewSecond(3);
         autorizationPage.iAmNotRobotClick();
 //      pass the I'm not a robot check by selecting the correct photos and clicking the "Login" button manually
-        homePage.sleepFewSecond(40);
+        homePage.sleepFewSecond(10);
         Assert.assertEquals("tiger38@gmail.com", homePage.getTextWrongMassage());
     }
 
-    @Test
+    @Test(priority = 4)
+    @Description("Checking the correct operation of the input field")
+    @Severity(SeverityLevel.CRITICAL)
+    @Link(url = "https://github.com/Test-Automation-Crash-Course-24-10-22/team_12/issues/13#issue-1447085257")
+    @Issue("13")
     public void inputField(){
         HomePage homePage = new HomePage(driver);
         homePage.enterDataInInput2("asus");
