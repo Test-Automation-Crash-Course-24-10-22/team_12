@@ -1,3 +1,5 @@
+package Pages;
+
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -23,6 +25,8 @@ public class HomePage {
     public static final String SEARCH_CATALOG_TITLE = "//a[@class = 'menu__hidden-title']";
     public static final String SEARCH_LOGIN_BUTTON = "//rz-user//button[@class = 'header__button ng-star-inserted']";
     public static final String SEARCH_WRONG_MASSAGE = "//strong";
+
+    public static final String SEARCH_WRONG_INPUT_MASSAGE = "//span[@class = 'ng-star-inserted']";
 
     @Step("Click the Change language button UA/RU")
     public void clickLanguageIcon(){
@@ -58,6 +62,12 @@ public class HomePage {
         WebElement catalogTitle = driver.findElement(By.xpath(SEARCH_CATALOG_TITLE));
         String textCatalogTitle = catalogTitle.getText();
         return textCatalogTitle;
+    }
+    @Step("Take the text after checking input field")
+    public String getWrongInputMassage(){
+        WebElement wrongInputMassage = driver.findElement(By.xpath(SEARCH_WRONG_INPUT_MASSAGE));
+        String textWrongInputMassage = wrongInputMassage.getText();
+        return textWrongInputMassage;
     }
     @Step("Click Login button")
     public void loginButtonClick(){

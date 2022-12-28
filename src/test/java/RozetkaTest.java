@@ -1,19 +1,9 @@
+import Pages.AutorizationPage;
+import Pages.HomePage;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import io.qameta.allure.*;
-import org.checkerframework.framework.qual.PreconditionAnnotation;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-
-import java.time.Duration;
-
-import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 
 public class RozetkaTest extends WebSettings{
 
@@ -88,6 +78,8 @@ public class RozetkaTest extends WebSettings{
         homePage.deleteDataInInput();
         homePage.sleepFewSecond(4);
         homePage.enterDataInInput2("fs.'th;otht");
+        homePage.sleepFewSecond(3);
+        Assert.assertEquals("За заданими параметрами не знайдено жодної моделі", homePage.getWrongInputMassage());
     }
 
 }
